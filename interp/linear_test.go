@@ -26,7 +26,7 @@ func TestLinearInterpolation(t *testing.T) {
 			[]float64{1.0, 1.1, 1.2, 1.3, 1.4},
 		},
 	}
-	// Loop through each testCases
+	// Loop through the testCases
 	for _, tc := range testCases {
 		y2 := Linear(tc.y1, tc.x1, tc.x2)
 		assert.Equal(t, y2, tc.expected)
@@ -45,7 +45,7 @@ func TestLocatingSubintervalIndex(t *testing.T) {
 		{[]float64{1.0, 2.0, 3.0, 4.0}, 3.5, 2},
 		{[]float64{1.0, 2.0, 3.0, 4.0}, 4.5, 2},
 	}
-	// Loop through each testCases
+	// Loop through the testCases
 	for _, tc := range testCases {
 		i := subintervalIndex(tc.x, tc.z)
 		assert.Equal(t, i, tc.expected)
