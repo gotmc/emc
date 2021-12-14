@@ -1,3 +1,8 @@
+// Copyright (c) 2017-2022 The emc developers. All rights reserved.
+// Project site: https://github.com/gotmc/emc
+// Use of this source code is governed by a MIT-style license that
+// can be found in the LICENSE.txt file for the project.
+
 package apply
 
 import "github.com/gotmc/emc/interp"
