@@ -16,6 +16,10 @@ const (
 	LMR400 CableType = "LMR-400"
 )
 
+func (c CableType) String() string {
+	return string(c)
+}
+
 // Loss returns the frequencies and cable loss based on the cable type and
 // length in feet.
 func Loss(cableType CableType, length float64) ([]float64, []float64) {
@@ -46,7 +50,7 @@ func Loss(cableType CableType, length float64) ([]float64, []float64) {
 		defaultLength = 100.0
 		freqs = []float64{9.0e3, 1.0e4, 2.5e4, 5.0e4, 1.0e5, 5.0e5, 1.0e6, 5.0e6,
 			1.0e7, 3.0e7, 5.0e7, 7.5e7, 1.0e8, 1.5e8, 2.0e8, 2.2e8, 3.0e8, 4.0e8,
-			4.5e8, 5.0e8, 6.0e8, 7.0e8, 8.0e8, 9.0e8, 1.0e8, 1.5e9}
+			4.5e8, 5.0e8, 6.0e8, 7.0e8, 8.0e8, 9.0e8, 1.0e9, 1.5e9}
 		loss = []float64{0.0112, 0.0118, 0.0188, 0.0267, 0.0380, 0.0860,
 			0.1223, 0.2771, 0.3490, 0.7000, 0.900, 1.0968, 1.2695, 1.50, 1.8054, 1.90,
 			2.2185, 2.5767, 2.70, 2.8759, 3.155, 3.4121, 3.6516, 3.9, 4.09, 5.1}
